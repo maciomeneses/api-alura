@@ -1,6 +1,6 @@
 package src.main.java.br.com.alura.modelo;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Usuario {
 
@@ -9,16 +9,16 @@ public class Usuario {
 	private String lastName;
 	private String email;
 	private String role;
-	private Date created_at;
-	private Date updated_at;
+	private LocalDateTime created_at;
+	private LocalDateTime updated_at;
 	
-	public Usuario(int id, String firstName, String lastName, String email, String role, Date created_at,Date updated_at) {
+	public Usuario(int id, String firstName, String lastName, String email, String role, LocalDateTime updated_at) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.role = role;
-		this.created_at = created_at;
+		this.created_at = LocalDateTime.now();
 		this.updated_at = updated_at;
 	}
 
@@ -42,11 +42,11 @@ public class Usuario {
 		return role;
 	}
 
-	public Date getCreated_at() {
+	public LocalDateTime getCreated_at() {
 		return created_at;
 	}
 
-	public Date getUpdated_at() {
+	public LocalDateTime getUpdated_at() {
 		return updated_at;
 	}
 	
