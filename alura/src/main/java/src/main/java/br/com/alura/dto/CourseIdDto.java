@@ -1,12 +1,12 @@
-package br.com.alura.forum.controller.dto;
+package src.main.java.br.com.alura.dto;
 
-import br.com.alura.forum.modelo.Curso2;
+import src.main.java.br.com.alura.modelo.Course;
 
 public class CourseIdDto {
 
     private Long id;
 
-    public CourseIdDto(Curso2 curso) {
+    public CourseIdDto(Course curso) {
         this.id = curso.getId();
     }
 }

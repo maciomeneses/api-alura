@@ -1,13 +1,14 @@
-package br.com.alura.forum.modelo;
+package src.main.java.br.com.alura.modelo;
+
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
 
 @Entity
-public class Curso2 {
+public class Course {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
