@@ -1,18 +1,21 @@
 package src.main.java.br.com.alura.modelo;
 
 import java.time.LocalDateTime;
+import src.main.java.br.com.alura.enums.UserRole;
 
+@Builder
+@Getter @Setter
 public class User {
 
-	private int id;
-	private String firstName;
-	private String lastName;
-	private String email;
-	private String role;
-	private LocalDateTime created_at;
-	private LocalDateTime updated_at;
+	 private int id;
+	 private String firstName;
+	 private String lastName;
+	 private String email;
+	 private UserRole role;
+	 private LocalDateTime created_at;
+	 private LocalDateTime updated_at;
 	
-	public User(int id, String firstName, String lastName, String email, String role, LocalDateTime updated_at) {
+	public User(int id, String firstName, String lastName, String email, UserRole role, LocalDateTime updated_at) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -22,34 +25,4 @@ public class User {
 		this.updated_at = updated_at;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public LocalDateTime getCreated_at() {
-		return created_at;
-	}
-
-	public LocalDateTime getUpdated_at() {
-		return updated_at;
-	}
-	
-	
-	
 }

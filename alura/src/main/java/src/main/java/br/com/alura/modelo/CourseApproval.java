@@ -2,14 +2,16 @@ package src.main.java.br.com.alura.modelo;
 
 import java.time.LocalDateTime;
 
+@Builder
+@Getter @Setter
 public class CourseApproval {
 
 
-    private Long id;
-    private Long courseId;
-    private String approvedBy;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+     private Long id;
+     private Long courseId;
+     private String approvedBy;
+     private LocalDateTime createdAt;
+     private LocalDateTime updatedAt;
 
     @Override
     public boolean equals(Object obj) {
@@ -28,43 +30,4 @@ public class CourseApproval {
         return true;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getCourseId() {
-        return courseId;
-    }
-
-    public void setCourseId(Long courseId) {
-        this.courseId = courseId;
-    }
-
-    public String getApprovedBy() {
-        return approvedBy;
-    }
-
-    public void setApprovedBy(String approvedBy) {
-        this.approvedBy = approvedBy;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }
