@@ -1,10 +1,15 @@
 package src.main.java.br.com.alura.modelo;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 import src.main.java.br.com.alura.enums.UserRole;
 
 @Builder
-@Getter @Setter
+@Getter
+@Setter
 public class User {
 
 	 private int id;
@@ -15,14 +20,36 @@ public class User {
 	 private LocalDateTime created_at;
 	 private LocalDateTime updated_at;
 	
-	public User(int id, String firstName, String lastName, String email, UserRole role, LocalDateTime updated_at) {
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.role = role;
-		this.created_at = LocalDateTime.now();
-		this.updated_at = updated_at;
+	public User(){
+
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Long.valueOf(id) == null) ? 0 : Long.valueOf(id).hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Certificate other = (Certificate) obj;
+		if (Long.valueOf(id) == null) {
+			if (Long.valueOf(other.getId()) != null)
+				return false;
+		} else if (id != (other.getId()))
+			return false;
+		return true;
+	}
+	
+	
+	
 }

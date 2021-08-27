@@ -1,5 +1,9 @@
 package src.main.java.br.com.alura.modelo;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
@@ -8,91 +12,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Builder
+@Getter
+@Setter
 public class Course {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String category;
-    private int workload;
-    private String status;
-    private Boolean hasCertificate;
-    private double evaluation;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
 
-    public int getWorkload() {
-        return workload;
-    }
-
-    public void setWorkload(int workload) {
-        this.workload = workload;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Boolean getHasCertificate() {
-        return hasCertificate;
-    }
-
-    public void setHasCertificate(Boolean hasCertificate) {
-        this.hasCertificate = hasCertificate;
-    }
-
-    public double getEvaluation() {
-        return evaluation;
-    }
-
-    public void setEvaluation(double evaluation) {
-        this.evaluation = evaluation;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
+     private Long id;
+     private String name;
+     private String category;
+     private int workload;
+     private String status;
+     private Boolean hasCertificate;
+     private double evaluation;
+     private LocalDateTime createdAt;
+     private LocalDateTime updatedAt;
 
     @Override
     public int hashCode() {
@@ -110,7 +45,7 @@ public class Course {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Curso other = (Curso) obj;
+        Course other = (Course) obj;
         if (id == null) {
             if (other.getId() != null)
                 return false;

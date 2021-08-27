@@ -1,24 +1,40 @@
 package src.main.java.br.com.alura.modelo;
 
-import java.time.LocalDateTime;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.time.LocalDateTime;
+@Builder
+@Getter
+@Setter
 public class Certificate {
 
-    private long id;
-    private long course_id;
-    private long user_id;
-    private LocalDateTime issued_at;
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    public Certificate(int id, int course_id, int user_id, LocalDateTime issued_at, LocalDateTime created_at, LocalDateTime updated_at) {
-        this.id = id;
-        this.course_id = course_id;
-        this.user_id = user_id;
-        this.issued_at = issued_at;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+
+
+     private long id;
+     private long course_id;
+     private long user_id;
+     private LocalDateTime issued_at;
+     private LocalDateTime created_at;
+     private LocalDateTime updated_at;
+
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((Long.valueOf(id) == null) ? 0 : Long.valueOf(id).hashCode());
+        return result;
     }
+
+
 
     @Override
     public boolean equals(Object obj) {
@@ -37,51 +53,5 @@ public class Certificate {
         return true;
     }
 
-    public long getId() {
-        return id;
-    }
 
-    public long getCourse_id() {
-        return course_id;
-    }
-
-    public long getUser_id() {
-        return user_id;
-    }
-
-    public LocalDateTime getIssued_at() {
-        return issued_at;
-    }
-
-    public LocalDateTime getCreated_at() {
-        return created_at;
-    }
-
-    public LocalDateTime getUpdated_at() {
-        return updated_at;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setCourse_id(int course_id) {
-        this.course_id = course_id;
-    }
-
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
-
-    public void setIssued_at(LocalDateTime issued_at) {
-        this.issued_at = issued_at;
-    }
-
-    public void setCreated_at(LocalDateTime created_at) {
-        this.created_at = created_at;
-    }
-
-    public void setUpdated_at(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
-    }
 }

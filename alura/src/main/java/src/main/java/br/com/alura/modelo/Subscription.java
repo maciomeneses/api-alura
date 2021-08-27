@@ -2,10 +2,14 @@ package src.main.java.br.com.alura.modelo;
 
 import java.time.LocalDateTime;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import src.main.java.br.com.alura.dto.UserIdDto;
 
 @Builder
-@Getter @Setter
+@Getter
+@Setter
 public class Subscription {
 
 	 private int id;
@@ -16,14 +20,34 @@ public class Subscription {
 	 private LocalDateTime created_at;
 	 private LocalDateTime updated_at;
 	
-	public Subscription(int id, int course_id, UserIdDto user, double progress, String status, LocalDateTime created_at,LocalDateTime updated_at) {
-		this.id = id;
-		this.course_id = course_id;
-		this.user_id = user.getId();
-		this.progress = progress;
-		this.status = status;
-		this.created_at = created_at;
-		this.updated_at = updated_at;
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Long.valueOf(id) == null) ? 0 : Long.valueOf(id).hashCode());
+		return result;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Certificate other = (Certificate) obj;
+		if (Long.valueOf(id) == null) {
+			if (Long.valueOf(other.getId()) != null)
+				return false;
+		} else if (id != (other.getId()))
+			return false;
+		return true;
+	}
+
+
+
 
 }
