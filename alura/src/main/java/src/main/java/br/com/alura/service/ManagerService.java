@@ -3,9 +3,6 @@ package src.main.java.br.com.alura.service;
 import src.main.java.br.com.alura.dto.CourseApprovalDto;
 import src.main.java.br.com.alura.dto.ManagerDTO;
 import src.main.java.br.com.alura.modelo.Course;
-import src.main.java.br.com.alura.modelo.Manager;
-
-import java.time.LocalDateTime;
 
 public class ManagerService {
 
@@ -15,6 +12,8 @@ public class ManagerService {
             //devolver erro
         } ;
             //atualizar valor no banco de dados no course aproval
+            //Adiciona o curso aprovado na lista de cursos
+
 
 
 
