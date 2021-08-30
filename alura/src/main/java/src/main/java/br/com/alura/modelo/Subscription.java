@@ -12,9 +12,9 @@ import src.main.java.br.com.alura.dto.UserIdDto;
 @Setter
 public class Subscription {
 
-	 private int id;
-	 private int course_id;
-	 private int user_id;
+	 private Long id;
+	 private Long course_id;
+	 private Long user_id;
 	 private double progress;
 	 private String status;
 	 private LocalDateTime created_at;
