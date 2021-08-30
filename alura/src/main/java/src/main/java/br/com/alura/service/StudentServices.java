@@ -9,8 +9,8 @@ import src.main.java.br.com.alura.modelo.Student;
 
 public class StudentServices {
 
-        public void courseSearch(CourseNameDTO courseNameDTO){
-
+        public void courseSearch(String name, CourseNameDTO nameDTO){
+                CourseStorageService.showCourses(name);
         }
 
         public void courseWatch(CourseWatchDTO courseWatchDTO){
