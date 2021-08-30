@@ -12,7 +12,7 @@ import src.main.java.br.com.alura.enums.UserRole;
 @Setter
 public class User {
 
-	 private int id;
+	 private Long id;
 	 private String firstName;
 	 private String lastName;
 	 private String email;
