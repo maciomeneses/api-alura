@@ -2,7 +2,7 @@ package src.main.java.br.com.alura.dto;
 
 
 import lombok.Getter;
-import src.main.java.br.com.alura.modelo.Manager;
+import src.main.java.br.com.alura.model.Manager;
 
 @Getter
 

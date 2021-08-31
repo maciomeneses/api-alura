@@ -1,8 +1,7 @@
 package src.main.java.br.com.alura.dto;
 
-import lombok.Builder;
 import lombok.Getter;
-import src.main.java.br.com.alura.modelo.User;
+import src.main.java.br.com.alura.model.User;
 
 
 @Getter
