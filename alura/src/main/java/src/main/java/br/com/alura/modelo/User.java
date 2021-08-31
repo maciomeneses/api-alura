@@ -1,55 +1,55 @@
 package src.main.java.br.com.alura.modelo;
 
-import java.time.LocalDateTime;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDateTime;
+import src.main.java.br.com.alura.enums.UserRole;
+
+@Builder
+@Getter
+@Setter
 public class User {
 
-	private int id;
-	private String firstName;
-	private String lastName;
-	private String email;
-	private String role;
-	private LocalDateTime created_at;
-	private LocalDateTime updated_at;
+	 private Long id;
+	 private String firstName;
+	 private String lastName;
+	 private String email;
+	 private UserRole role;
+	 private LocalDateTime created_at;
+	 private LocalDateTime updated_at;
 	
-	public User(int id, String firstName, String lastName, String email, String role, LocalDateTime updated_at) {
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.role = role;
-		this.created_at = LocalDateTime.now();
-		this.updated_at = updated_at;
+	public User(){
+
 	}
 
-	public int getId() {
-		return id;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Long.valueOf(id) == null) ? 0 : Long.valueOf(id).hashCode());
+		return result;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
 
-	public String getLastName() {
-		return lastName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public LocalDateTime getCreated_at() {
-		return created_at;
-	}
-
-	public LocalDateTime getUpdated_at() {
-		return updated_at;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Certificate other = (Certificate) obj;
+		if (Long.valueOf(id) == null) {
+			if (Long.valueOf(other.getId()) != null)
+				return false;
+		} else if (id != (other.getId()))
+			return false;
+		return true;
 	}
 	
-	
+	// teste
 	
 }
