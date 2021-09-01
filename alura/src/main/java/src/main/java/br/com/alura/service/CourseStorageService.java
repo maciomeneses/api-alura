@@ -14,9 +14,8 @@ public class CourseStorageService {
         list.add(course);
     }
 
-    public static Collection<CourseDetails> showCourses(String name, CourseDetails course) {
-        int size = name.length();
-        return list.stream().filter(c -> c.getName().substring(0, (size -1)).equals(name)).collect(Collectors.toUnmodifiableList());
+    public static Collection<CourseDetails> showCourses(String name) {
+        return list.stream().filter(course -> course.getName().startsWith(name)).collect(Collectors.toUnmodifiableList());
     }
 
 }
