@@ -20,7 +20,6 @@ public class ManagerService {
     }
 
     public void CreateCourse( Long id,String name, String category,int workload) {
-
          course = Course.builder().id(id).name(name).category(category).workload(workload).build();
         //passar o curso para o banco de dados
     }

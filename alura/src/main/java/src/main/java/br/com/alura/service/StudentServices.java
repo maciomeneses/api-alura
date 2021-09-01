@@ -14,7 +14,7 @@ public class StudentServices {
 
         }
 
-        public void courseSubscribe(CourseSubscribeDTO courseSubscribeDTO, StudentDto studentDto){
+        public void courseSubscribe(CourseSubscribeDTO courseSubscribeDTO, StudentDto studentDto) { //receberá o id do aluno pela url
 
                 if(courseSubscribeDTO.getUserId().equals(studentDto.getId())){
                         //devolver erro
