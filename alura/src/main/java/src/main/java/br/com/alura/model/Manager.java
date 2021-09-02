@@ -1,4 +1,4 @@
-package src.main.java.br.com.alura.modelo;
+package src.main.java.br.com.alura.model;
 
 import java.time.LocalDateTime;
 

@@ -1,7 +1,7 @@
 package src.main.java.br.com.alura.dto;
 
 import lombok.Getter;
-import src.main.java.br.com.alura.modelo.Student;
+import src.main.java.br.com.alura.model.Student;
 
 @Getter
 public class StudentDto {

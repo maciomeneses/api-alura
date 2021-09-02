@@ -2,7 +2,7 @@ package src.main.java.br.com.alura.service;
 
 import src.main.java.br.com.alura.dto.CourseApprovalDto;
 import src.main.java.br.com.alura.dto.ManagerDTO;
-import src.main.java.br.com.alura.modelo.Course;
+import src.main.java.br.com.alura.model.Course;
 
 public class ManagerService {
 
@@ -21,7 +21,6 @@ public class ManagerService {
     }
 
     public void CreateCourse( Long id,String name, String category,int workload){
-
 
 
         Course curso = Course.builder().id(id).name(name).category(category).workload(workload).build();

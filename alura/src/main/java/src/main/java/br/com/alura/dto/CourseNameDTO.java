@@ -3,7 +3,7 @@ package src.main.java.br.com.alura.dto;
 
 
 import lombok.Getter;
-import src.main.java.br.com.alura.modelo.Course;
+import src.main.java.br.com.alura.model.Course;
 
 @Getter
 
