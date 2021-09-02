@@ -1,26 +1,28 @@
-package src.main.java.br.com.alura.modelo;
-
-import java.time.LocalDateTime;
+package src.main.java.br.com.alura.model;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import src.main.java.br.com.alura.dto.UserIdDto;
+
+import java.time.LocalDateTime;
+import src.main.java.br.com.alura.enums.UserRole;
 
 @Builder
 @Getter
 @Setter
-public class Subscription {
+public class User {
 
 	 private Long id;
-	 private Long course_id;
-	 private Long user_id;
-	 private double progress;
-	 private String status;
+	 private String firstName;
+	 private String lastName;
+	 private String email;
+	 private UserRole role;
 	 private LocalDateTime created_at;
 	 private LocalDateTime updated_at;
 	
+	public User(){
 
+	}
 
 	@Override
 	public int hashCode() {
@@ -29,6 +31,7 @@ public class Subscription {
 		result = prime * result + ((Long.valueOf(id) == null) ? 0 : Long.valueOf(id).hashCode());
 		return result;
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -46,8 +49,5 @@ public class Subscription {
 			return false;
 		return true;
 	}
-
-
-
-
+	
 }

@@ -3,6 +3,10 @@ package src.main.java.br.com.alura.service;
 import src.main.java.br.com.alura.dto.*;
 import src.main.java.br.com.alura.modelo.Course;
 import src.main.java.br.com.alura.modelo.Student;
+import src.main.java.br.com.alura.dto.CourseNameDTO;
+import src.main.java.br.com.alura.dto.CourseSubscribeDTO;
+import src.main.java.br.com.alura.dto.CourseWatchDTO;
+import src.main.java.br.com.alura.dto.StudentDto;
 
 public class StudentServices {
 

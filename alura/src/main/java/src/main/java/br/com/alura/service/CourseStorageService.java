@@ -1,6 +1,7 @@
 package src.main.java.br.com.alura.service;
 
 import src.main.java.br.com.alura.dto.CourseDetails;
+import src.main.java.br.com.alura.model.Course;
 
 import java.util.ArrayList;
 import java.util.Collection;

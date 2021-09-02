@@ -1,9 +1,7 @@
-package src.main.java.br.com.alura.modelo;
+package src.main.java.br.com.alura.model;
 
 import java.time.LocalDateTime;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 
 import src.main.java.br.com.alura.enums.UserRole;
 
