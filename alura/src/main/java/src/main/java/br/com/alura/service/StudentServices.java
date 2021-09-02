@@ -15,7 +15,7 @@ public class StudentServices {
         }
 
         public void courseWatch(CourseWatchDTO courseWatchDTO) {
-
+                System.out.println(courseWatchDTO);
         }
 
         public void courseSubscribe(CourseSubscribeDTO courseSubscribeDTO, StudentDto studentDto) { //receberá o id do aluno pela url
