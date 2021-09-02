@@ -7,7 +7,7 @@ public class CourseSubscribeDTO {
 
     Long userId;
 
-    public CourseSubscribeDTO(Subscription subscription){
+    public CourseSubscribeDTO(Subscription subscription) {
         userId = subscription.getUser_id();
     }
 
