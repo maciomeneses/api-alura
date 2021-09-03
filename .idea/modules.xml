@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/api-alura.iml" filepath="$PROJECT_DIR$/api-alura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.alura.alura.iml" filepath="$PROJECT_DIR$/.idea/modules/com.alura.alura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.alura.alura.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.alura.alura.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.alura.alura.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.alura.alura.test.iml" />
     </modules>
   </component>
 </project>

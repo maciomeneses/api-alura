@@ -11,6 +11,11 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+  </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-alura" options="--add-exports java.base/jdk.internal.icu.text=ALL-UNNAMED" />
