@@ -9,7 +9,7 @@ public class StudentDto {
     Long id;
 
     public StudentDto(Student student){
-        id= student.getId();
+        id = student.getId();
 
     }
 
