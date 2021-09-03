@@ -1,4 +1,4 @@
-package src.main.java.br.com.alura.modelo;
+package src.main.java.br.com.alura.model;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -8,13 +8,12 @@ import java.time.LocalDateTime;
 @Builder
 @Getter
 @Setter
-public class CourseApproval {
-
+public class CourseLesson {
 
     private Long id;
     private Long courseId;
-    private String approvedBy;
-    private Long createdBy;
+    private String title;
+    private Long duration;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -35,7 +34,7 @@ public class CourseApproval {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        CourseApproval other = (CourseApproval) obj;
+        CourseLesson other = (CourseLesson) obj;
         if (id == null) {
             if (other.getId() != null)
                 return false;
@@ -43,6 +42,4 @@ public class CourseApproval {
             return false;
         return true;
     }
-
-
 }

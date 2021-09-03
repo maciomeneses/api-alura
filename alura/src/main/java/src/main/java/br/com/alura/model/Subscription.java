@@ -1,11 +1,10 @@
-package src.main.java.br.com.alura.modelo;
+package src.main.java.br.com.alura.model;
 
 import java.time.LocalDateTime;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import src.main.java.br.com.alura.dto.UserIdDto;
 
 @Builder
 @Getter
