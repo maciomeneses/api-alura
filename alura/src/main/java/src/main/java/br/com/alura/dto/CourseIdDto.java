@@ -2,7 +2,8 @@ package src.main.java.br.com.alura.dto;
 
 import lombok.Builder;
 import lombok.Getter;
-import src.main.java.br.com.alura.modelo.Course;
+import org.springframework.data.domain.Page;
+import src.main.java.br.com.alura.model.Course;
 
 
 @Getter
@@ -11,8 +12,12 @@ public class CourseIdDto {
 
     private Long id;
 
-    public CourseIdDto(Course course){
-        id=course.getId();
+    public CourseIdDto(Course course) {
+        this.id = course.getId();
+    }
+
+    public static Page<CourseIdDto> converter(Page<Course> courses) {
+        return courses.map(CourseIdDto::new);
     }
 
 }
