@@ -1,17 +1,16 @@
 package src.main.java.br.com.alura.dto;
 
-import lombok.Getter;
+import lombok.*;
 import src.main.java.br.com.alura.model.User;
 
-
-@Getter
-
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserIdDto {
 
 	private Long id;
 
-	public UserIdDto(User user){
-		id=user.getId();
-	}
+
 			
 }

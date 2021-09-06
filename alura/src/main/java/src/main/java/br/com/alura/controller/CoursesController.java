@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import src.main.java.br.com.alura.dto.CourseIdDto;
+import src.main.java.br.com.alura.dto.PageCourseIdDto;
 import src.main.java.br.com.alura.model.Course;
 
 @RestController
@@ -27,7 +28,9 @@ public class CoursesController {
 								   @PageableDefault(sort = "dataCriacao", direction = Direction.DESC, page = 0, size = 10) Pageable paginacao) {
 		
 		if (nomeCurso == null) {
+			PageCourseIdDto pageCourseIdDto  = new PageCourseIdDto();
 			Page<Course> Courses = CourseRepository.findAll(paginacao);
+			pageCourseIdDto.setCourses(Courses);
 			return CourseIdDto.converter(Courses);
 		} else {
 			Page<Course> Courses = CourseRepository.findByCourseName(nomeCurso, paginacao);

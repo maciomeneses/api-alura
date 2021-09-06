@@ -6,20 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
 import src.main.java.br.com.alura.model.Course;
-
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CourseIdDto {
+public class PageCourseIdDto {
 
-    private Long id;
+    private Page<CourseIdDto> courses;
 
-
-
-//    public static Page<CourseIdDto> converter(Page<Course> courses) {
-//        return courses.map(CourseIdDto::new);
-//    }
 
 }
