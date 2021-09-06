@@ -1,9 +1,9 @@
 package src.main.java.br.com.alura.model;
 
+import src.main.java.br.com.alura.enums.UserRole;
+
 import java.time.LocalDateTime;
 import java.util.HashMap;
-
-import src.main.java.br.com.alura.enums.UserRole;
 
 public class Student extends User{
 
