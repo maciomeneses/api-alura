@@ -11,14 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import src.main.java.br.com.alura.controller.dto.CourseIdDto;
-import src.main.java.br.com.alura.service.CourseStorageService;
+import src.main.java.br.com.alura.service.CourseService;
 
 @RestController
 @RequestMapping("/Courses")
 public class CoursesController {
-	
+
 	@Autowired
-	private src.main.java.br.com.alura.repository.CourseRepository CourseRepository;
+	CourseService courseService;
+
 	
 	@GetMapping
 	//@Cacheable(value = "listaDeCourses")
@@ -28,8 +29,8 @@ public class CoursesController {
 
 
 
-		CourseStorageService courseStorageService = new CourseStorageService();
-		return courseStorageService.listCourses(nomeCurso,paginacao);
+
+		return courseService.listCourses(nomeCurso,paginacao);
 
 	}
 	

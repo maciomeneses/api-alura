@@ -1,17 +1,17 @@
 package src.main.java.br.com.alura.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
 
+@Data
 @Builder
-@Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
 @Entity
 //@Table(name = "COURSE")
 public class Course {
@@ -27,30 +27,6 @@ public class Course {
      private LocalDateTime createdAt;
      private LocalDateTime updatedAt;
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Course other = (Course) obj;
-        if (id == null) {
-            if (other.getId() != null)
-                return false;
-        } else if (!id.equals(other.getId()))
-            return false;
-        return true;
-    }
 
 
 }

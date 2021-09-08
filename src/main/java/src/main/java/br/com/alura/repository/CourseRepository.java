@@ -12,7 +12,7 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
 
 
     //@Query("select t from src.main.java.br.com.alura.model.Course t where t.course.name = ?1" )
-    @Query("select c from Course c where c.name = ?1")
+    //@Query("select c from Course c where c.name = ?1")
     Page<Course> findByName(String name, Pageable pageable);
 
 

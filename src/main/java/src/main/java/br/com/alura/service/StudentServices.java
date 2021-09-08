@@ -7,7 +7,7 @@ import src.main.java.br.com.alura.controller.dto.StudentDto;
 public class StudentServices {
 
         public void courseSearch(String name) {
-                CourseStorageService.showCourses(name);
+                CourseService.showCourses(name);
         }
 
         public void courseWatch(CourseWatchDTO courseWatchDTO) {

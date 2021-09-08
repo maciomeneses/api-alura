@@ -16,7 +16,7 @@ public class ManagerService {
         } ;
             //atualizar valor no banco de dados no course aproval
             //Adiciona o curso aprovado na lista de cursos:
-            CourseStorageService.addCourse(new CourseDetails(course));
+            CourseService.addCourse(new CourseDetails(course));
     }
 
     public void CreateCourse( Long id,String name, String category,int workload) {
